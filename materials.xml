@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<materials>
+  <material depletable="true" id="2" name="fuel" temperature="523.15">
+    <density units="atom/b-cm" value="0.07021"/>
+    <nuclide ao="0.0149" name="U235"/>
+    <nuclide ao="0.0826" name="U238"/>
+    <nuclide ao="0.00469" name="O16"/>
+  </material>
+  <material id="3" name="steel" temperature="523.15">
+    <density units="atom/b-cm" value="0.0049"/>
+    <nuclide ao="0.05815775" name="Fe54"/>
+    <nuclide ao="0.9129523" name="Fe56"/>
+    <nuclide ao="0.02108405" name="Fe57"/>
+    <nuclide ao="0.0028059" name="Fe58"/>
+    <nuclide ao="0.00494461" name="C12"/>
+    <nuclide ao="5.5389999999999997e-05" name="C13"/>
+  </material>
+  <material id="4" name="helium" temperature="523.15">
+    <density units="sum"/>
+    <nuclide ao="1.9999999999999998e-17" name="He3"/>
+    <nuclide ao="9.999979999999999e-12" name="He4"/>
+  </material>
+  <material id="5" name="sodium" temperature="523.15">
+    <density units="sum"/>
+    <nuclide ao="0.0233" name="Na23"/>
+  </material>
+</materials>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="4" material="4" region="-3" universe="2"/>
+  <cell id="5" material="2" region="3 -4" universe="2"/>
+  <cell id="6" material="4" region="4 -5" universe="2"/>
+  <cell id="7" material="3" region="5 -6" universe="2"/>
+  <cell id="8" material="5" region="6 -7 8 9 -10" universe="2"/>
+  <surface coeffs="0.0 0.0 0.0802" id="3" type="z-cylinder"/>
+  <surface coeffs="0.0 0.0 0.25565" id="4" type="z-cylinder"/>
+  <surface coeffs="0.0 0.0 0.27112" id="5" type="z-cylinder"/>
+  <surface coeffs="0.0 0.0 0.30499" id="6" type="z-cylinder"/>
+  <surface boundary="reflective" coeffs="0.3475" id="7" type="y-plane"/>
+  <surface boundary="reflective" coeffs="-0.3475" id="8" type="y-plane"/>
+  <surface boundary="reflective" coeffs="-0.3475" id="9" type="x-plane"/>
+  <surface boundary="reflective" coeffs="0.3475" id="10" type="x-plane"/>
+</geometry>

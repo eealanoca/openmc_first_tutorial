@@ -1,0 +1,22 @@
+ ============================>     TALLY 6     <============================
+
+ Material 2
+   Total Material
+     Fission Rate                         0.357347 +/- 0.00202344
+     Absorption Rate                      0.571248 +/- 0.00366985
+     Scattering Rate                      12.7317 +/- 0.080944
+ Material 3
+   Total Material
+     Fission Rate                         0 +/- 0
+     Absorption Rate                      0.000389053 +/- 4.87735e-06
+     Scattering Rate                      0.209527 +/- 0.00149252
+ Material 4
+   Total Material
+     Fission Rate                         0 +/- 0
+     Absorption Rate                      1.34879e-16 +/- 1.08408e-18
+     Scattering Rate                      9.85483e-11 +/- 4.69622e-13
+ Material 5
+   Total Material
+     Fission Rate                         0 +/- 0
+     Absorption Rate                      0.000490833 +/- 1.40846e-05
+     Scattering Rate                      1.93741 +/- 0.0119498

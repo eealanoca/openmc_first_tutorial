@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<model>
+  <materials>
+    <material depletable="true" id="2" name="fuel" temperature="523.15">
+      <density units="atom/b-cm" value="0.07021"/>
+      <nuclide ao="0.0149" name="U235"/>
+      <nuclide ao="0.0826" name="U238"/>
+      <nuclide ao="0.00469" name="O16"/>
+    </material>
+    <material id="3" name="steel" temperature="523.15">
+      <density units="atom/b-cm" value="0.0049"/>
+      <nuclide ao="0.05815775" name="Fe54"/>
+      <nuclide ao="0.9129523" name="Fe56"/>
+      <nuclide ao="0.02108405" name="Fe57"/>
+      <nuclide ao="0.0028059" name="Fe58"/>
+      <nuclide ao="0.00494461" name="C12"/>
+      <nuclide ao="5.5389999999999997e-05" name="C13"/>
+    </material>
+    <material id="4" name="helium" temperature="523.15">
+      <density units="sum"/>
+      <nuclide ao="1.9999999999999998e-17" name="He3"/>
+      <nuclide ao="9.999979999999999e-12" name="He4"/>
+    </material>
+    <material id="5" name="sodium" temperature="523.15">
+      <density units="sum"/>
+      <nuclide ao="0.0233" name="Na23"/>
+    </material>
+  </materials>
+  <geometry>
+    <cell id="12" material="4" region="-13" universe="5"/>
+    <cell id="13" material="2" region="13 -14" universe="5"/>
+    <cell id="14" material="4" region="14 -15" universe="5"/>
+    <cell id="15" material="3" region="15 -16" universe="5"/>
+    <cell id="16" material="5" region="16" universe="5"/>
+    <cell id="22" material="5" universe="13"/>
+    <cell fill="9" id="23" region="-36 37 -38 -39 40 41" universe="14"/>
+    <cell id="24" material="3" region="~(-36 37 -38 -39 40 41) (-42 43 -44 -45 46 47)" universe="14"/>
+    <cell id="25" material="5" region="~(-42 43 -44 -45 46 47) (-48 49 -50 -51 52 53)" universe="14"/>
+    <cell fill="14" id="26" region="55 -54 -48 49 -50 -51 52 53" universe="15"/>
+    <hex_lattice id="9" n_rings="5">
+      <pitch>0.695</pitch>
+      <outer>13</outer>
+      <center>0.0 0.0</center>
+      <universes>
+    5
+   5 5
+  5 5 5
+ 5 5 5 5
+5 5 5 5 5
+ 5 5 5 5
+5 5 5 5 5
+ 5 5 5 5
+5 5 5 5 5
+ 5 5 5 5
+5 5 5 5 5
+ 5 5 5 5
+5 5 5 5 5
+ 5 5 5 5
+  5 5 5
+   5 5
+    5</universes>
+    </hex_lattice>
+    <surface coeffs="0.0 0.0 0.0802" id="13" type="z-cylinder"/>
+    <surface coeffs="0.0 0.0 0.25565" id="14" type="z-cylinder"/>
+    <surface coeffs="0.0 0.0 0.27112" id="15" type="z-cylinder"/>
+    <surface coeffs="0.0 0.0 0.30499" id="16" type="z-cylinder"/>
+    <surface coeffs="2.841720000066609" id="36" type="x-plane"/>
+    <surface coeffs="-2.841720000066609" id="37" type="x-plane"/>
+    <surface coeffs="0.5773502691896257 1.0 0.0 3.281335614" id="38" type="plane"/>
+    <surface coeffs="-0.5773502691896257 1.0 0.0 3.281335614" id="39" type="plane"/>
+    <surface coeffs="-0.5773502691896257 1.0 0.0 -3.281335614" id="40" type="plane"/>
+    <surface coeffs="0.5773502691896257 1.0 0.0 -3.281335614" id="41" type="plane"/>
+    <surface coeffs="2.9622100001797844" id="42" type="x-plane"/>
+    <surface coeffs="-2.9622100001797844" id="43" type="x-plane"/>
+    <surface coeffs="0.5773502691896257 1.0 0.0 3.420465482" id="44" type="plane"/>
+    <surface coeffs="-0.5773502691896257 1.0 0.0 3.420465482" id="45" type="plane"/>
+    <surface coeffs="-0.5773502691896257 1.0 0.0 -3.420465482" id="46" type="plane"/>
+    <surface coeffs="0.5773502691896257 1.0 0.0 -3.420465482" id="47" type="plane"/>
+    <surface boundary="reflective" coeffs="3.062600000138308" id="48" type="x-plane"/>
+    <surface boundary="reflective" coeffs="-3.062600000138308" id="49" type="x-plane"/>
+    <surface boundary="reflective" coeffs="0.5773502691896257 1.0 0.0 3.536385869" id="50" type="plane"/>
+    <surface boundary="reflective" coeffs="-0.5773502691896257 1.0 0.0 3.536385869" id="51" type="plane"/>
+    <surface boundary="reflective" coeffs="-0.5773502691896257 1.0 0.0 -3.536385869" id="52" type="plane"/>
+    <surface boundary="reflective" coeffs="0.5773502691896257 1.0 0.0 -3.536385869" id="53" type="plane"/>
+    <surface boundary="vacuum" coeffs="20.0" id="54" type="z-plane"/>
+    <surface boundary="vacuum" coeffs="-20.0" id="55" type="z-plane"/>
+  </geometry>
+  <settings>
+    <run_mode>eigenvalue</run_mode>
+    <particles>1000</particles>
+    <batches>50</batches>
+    <inactive>10</inactive>
+    <source particle="neutron" strength="1.0" type="independent">
+      <space type="point">
+        <parameters>0.0 0.1 0.0</parameters>
+      </space>
+    </source>
+    <temperature_method>nearest</temperature_method>
+    <temperature_tolerance>100.0</temperature_tolerance>
+  </settings>
+  <tallies>
+    <filter id="3" type="material">
+      <bins>2 3 4 5</bins>
+    </filter>
+    <tally id="6">
+      <filters>3</filters>
+      <scores>fission absorption scatter</scores>
+    </tally>
+  </tallies>
+</model>
